@@ -1,0 +1,3 @@
+** In React, when you update state using the setState function or, in this case, setCount for updating a state variable managed by the useState hook, the update does not happen immediately. Instead, it schedules an update to the state and proceeds to execute the next lines of code without waiting for the state to actually update. This is part of React's asynchronous state update mechanism, designed for performance optimization.
+
+Given this, when you call console.log(count) immediately after setCount(count + 1), you're seeing the value of count before the state update was applied. The count variable holds the state value from the current render, but the state update that you've triggered won't take effect until the next render of the component. 
